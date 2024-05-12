@@ -1,4 +1,4 @@
-package com.example.begoussediccouse_finalproject.dashboard;
+package com.fabfunctions.begoussediccouse_finalproject.event;
 
 import android.os.Bundle;
 
@@ -8,15 +8,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.begoussediccouse_finalproject.R;
+import com.fabfunctions.begoussediccouse_finalproject.R;
 
-public class Dashboard extends AppCompatActivity {
+public class Event extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_event);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

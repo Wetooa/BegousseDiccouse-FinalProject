@@ -1,13 +1,15 @@
 plugins {
     alias(libs.plugins.androidApplication)
+
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.example.begoussediccouse_finalproject"
+    namespace = "com.fabfunctions.begoussediccouse_finalproject"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.begoussediccouse_finalproject"
+        applicationId = "com.fabfunctions.begoussediccouse_finalproject"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -43,4 +45,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+    implementation("com.google.firebase:firebase-analytics")
 }

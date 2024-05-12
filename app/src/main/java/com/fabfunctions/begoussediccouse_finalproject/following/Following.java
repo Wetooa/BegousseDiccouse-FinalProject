@@ -1,4 +1,4 @@
-package com.example.begoussediccouse_finalproject.following;
+package com.fabfunctions.begoussediccouse_finalproject.following;
 
 import android.os.Bundle;
 
@@ -8,7 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.begoussediccouse_finalproject.R;
+import com.fabfunctions.begoussediccouse_finalproject.R;
 
 public class Following extends AppCompatActivity {
 

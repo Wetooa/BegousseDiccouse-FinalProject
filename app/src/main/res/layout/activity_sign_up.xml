@@ -1,10 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/paneMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".sign_up.SignUp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--  TODO: add arrow here -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_arrow_left_foreground" />
+
+
+    <TextView
+        android:id="@+id/textSignInHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editFullName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:autofillHints="fullName"
+        android:background="@drawable/edittext_border"
+        android:drawableStart="@drawable/ic_avatar_foreground"
+        android:hint="@string/sign_in_fullname_hint"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/edittext_border"
+        android:drawableStart="@drawable/ic_email_foreground"
+        android:hint="@string/sign_in_email_hint"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/edittext_border"
+        android:drawableStart="@drawable/ic_lock_foreground"
+        android:hint="@string/sign_in_password_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/editConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/edittext_border"
+        android:drawableStart="@drawable/ic_lock_foreground"
+        android:hint="@string/sign_in_password_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPassword" />
+
+
+    <LinearLayout
+        android:id="@+id/paneSignInToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchRememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/remember_me" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/forgot_password"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_arrow_right_foreground"
+        android:text="@string/sign_in"
+        android:textAllCaps="true" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Or"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in_with_google" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in_with_facebook" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_an_account" />
+
+        <TextView
+            android:id="@+id/linkToSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:linksClickable="true"
+            android:text="@string/sign_in"
+            android:textColor="@color/link"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>
